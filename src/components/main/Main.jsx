@@ -1,19 +1,19 @@
 import React from "react";
 
 import Home from "components/home/Home";
-import Skills from "components/main/Skills";
-import Contact from "components/main/Contact";
-import Posts from "components/main/Posts";
-import Experience from "components/main/Experience";
+import Skills from "components/skills/Skills";
+import Contact from "components/contact/Contact";
+import Posts from "components/post/Posts";
+import Experiences from "components/experience/Experiences";
 
 const Main = () => {
   return (
     <main>
       <Home />
       <Skills />
-      <Contact />
+      <Experiences />
       <Posts />
-      <Experience />
+      <Contact />
     </main>
   );
 };
