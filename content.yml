@@ -1,0 +1,153 @@
+# All portfolio content lives here. Edit, push to main, and the site rebuilds.
+# Any section left empty (or removed) is hidden from the page, nav and ⌘K palette.
+
+site:
+  title: Samarth Sangam | Portfolio
+  description: Portfolio of Samarth Sangam, Full Stack Web Developer based in Bangalore, India.
+  # Terminal prompt shown before every section command: <user>@<host>:~$
+  user: samarth
+  host: portfolio
+  # primary = prompt / accents, secondary = paths / links. Visitors toggle via the header button.
+  theme:
+    dark:
+      primary: "#3fb950"
+      secondary: "#58a6ff"
+    light:
+      primary: "#1a7f37"
+      secondary: "#0969da"
+
+profile:
+  name: Samarth Sangam
+  role: Senior Software Engineer
+  location: Bangalore, India
+  careerStart: 2019 # used to render "N+ years"
+  # avatar: /avatar.jpg # optional, put the file in /public
+  # email: you@example.com # optional, enables the "mail" CTA in Contact
+  typed:
+    - Senior Software Engineer
+    - Full Stack Developer
+    - Java & Spring Boot
+    - React & Next.js
+    - Cloud & Distributed Systems
+  about: |
+    I'm a Bangalore-based Senior Software Engineer building full stack systems, from Spring Boot services and event-driven backends to React and Next.js frontends.
+
+    I optimize systems for performance, scalability, and maintainability. I design architectures and implement solutions that meet these goals. I lead rebuilds of legacy systems, modernise platforms (Java 8 → 21, jQuery → React, Monolith → Microservices), set technical direction through design spikes, and mentor engineers along the way.
+
+# icon: linkedin | github | medium | email | website (anything else falls back to a link icon)
+links:
+  - label: LinkedIn
+    icon: linkedin
+    url: https://www.linkedin.com/in/samarth-s-sangam/
+  - label: GitHub
+    icon: github
+    url: https://github.com/samarth-sangam
+  - label: Medium
+    icon: medium
+    url: https://medium.com/@samarthsangam1
+
+# logo: one of src/assets/icons/<logo>.svg; otherwise faIcon (Font Awesome class) is used.
+# items: short sub-skills shown as tags under each card.
+skills:
+  - name: Java
+    logo: java
+    items: [Java 21, OOP, Functional, JUnit 5]
+  - name: Spring Boot
+    logo: spring-framework
+    items: [REST, Security, Batch, JPA, OAuth2]
+  - name: JavaScript
+    faIcon: fab fa-js
+    color: "#f0db4f"
+    items: [TypeScript, ES6+]
+  - name: React
+    logo: react
+    items: [Next.js, Jotai, SSR]
+  - name: Python
+    faIcon: fab fa-python
+    color: "#3776ab"
+    items: [Scripting, Automation]
+  - name: Azure
+    faIcon: fab fa-microsoft
+    color: "#0078d4"
+    items: [Functions, Cosmos DB, Service Bus, App Insights]
+  - name: AWS
+    faIcon: fab fa-aws
+    color: "#ff9900"
+    items: [Aurora, S3]
+  - name: GCP
+    faIcon: fab fa-google
+    color: "#4285f4"
+    items: [Pub/Sub, Workload Identity]
+  - name: Containers
+    faIcon: fab fa-docker
+    color: "#2496ed"
+    items: [Docker, Kubernetes]
+  - name: Messaging
+    faIcon: fas fa-tower-broadcast
+    color: "#8b949e"
+    items: [Kafka, IBM MQ, Service Bus]
+  - name: Databases
+    faIcon: fas fa-database
+    color: "#336791"
+    items: [PostgreSQL, MySQL, Cosmos DB, Liquibase]
+  - name: CI/CD
+    faIcon: fab fa-jenkins
+    color: "#d33833"
+    items: [GitHub Actions, Jenkins, GitLab CI, SonarQube]
+  - name: Build & VCS
+    logo: git
+    items: [Git, SVN, Gradle, Maven]
+
+# Newest first. summary is a one-liner; stack renders as tags.
+experience:
+  - company: Best Buy
+    title: Senior Software Engineer
+    period: Feb 2025 - Present
+    stack: [Java, Spring Boot, Azure, GraphQL, IBM MQ, GitHub Actions]
+    summary: Technical lead on customer-service and repair platforms, covering proactive customer notifications, compliance invoicing, the rebuild of in-store appointment scheduling, cloud cost reduction and security hardening.
+  - company: Juniper Networks
+    title: Software Engineer 3 / Software Engineer 2
+    period: Nov 2021 - Jan 2025
+    stack: [Java, Spring Boot, Next.js, Jotai, SVN, Proxmox, SonarQube]
+    summary: Built developer-productivity and build-infrastructure tooling for Junos engineering, including a Java 8 to 21 upgrade, a one-click test and analysis portal, and build-failure triage; led a product initiative and mentored an intern.
+  - company: Mahindra Comviva
+    title: Senior Software Engineer / Software Engineer
+    period: Sept 2019 - Oct 2021
+    stack: [React, PHP, Kubernetes, Grafana, Nagios, Ansible]
+    summary: Full stack engineer on the OAM monitoring and alerting platform; led the jQuery to React migration, built ticketing integrations and Kubernetes deployments for Grafana.
+  - company: Rakuten India
+    title: Technical Intern
+    period: Jan 2019 - Jun 2019
+    stack: [Spring Boot, MySQL NDB Cluster, ClusterJ, JMeter]
+    summary: Built a proof of concept migrating the Rakuten ID System database to MySQL Cluster (NDB).
+  - company: BMS College of Engineering
+    title: B.E. in Information Science and Engineering
+    period: "2019"
+
+projects:
+  - name: Task Manager API
+    description: Rest API for task manager, Postman API documentation link can be found at my github repository.
+    stack: [Express, Node.js, Mongoose, Jest, Heroku]
+    github: https://github.com/samarth-sangam/task-manager-api
+  - name: Node Geocode
+    description: Geocode of address using Node.
+    stack: [Express, Node.js, hbs, Heroku]
+    github: https://github.com/samarth-sangam/node-geocode
+  - name: Chat App
+    description: Room based chat web application, filters out explicit language.
+    stack: [Express, Socket.io, Node.js]
+    github: https://github.com/samarth-sangam/chat-app
+  - name: Amazon clone
+    description: Amazon clone built using React, Context API, Firebase and Firebase authentication.
+    stack: [React, React Context, Firebase, SCSS, Express, Stripe.js]
+    github: https://github.com/samarth-sangam/amazon-clone
+    url: https://clone-95b79.web.app/
+
+# Latest Medium posts are fetched at build time. Remove this block to hide the section.
+blog:
+  medium: samarthsangam1
+  limit: 5
+
+contact:
+  heading: Let's build something together.
+  message: Open to interesting problems, collaborations and a good chat about software.
