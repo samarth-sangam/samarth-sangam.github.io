@@ -1,19 +1,43 @@
-html {
+main {
   scroll-behavior: smooth;
 }
 
-section[id],
-main {
-  scroll-margin-top: 48px;
-}
-
-main:focus {
+main:focus:not(:focus-visible) {
   outline: none;
 }
 
 :focus-visible {
   outline: 2px solid var(--mui-palette-secondary-main);
   outline-offset: 2px;
+}
+
+/* Floating gradient pill scrollbar; Firefox (no ::-webkit-scrollbar) gets the flat-colour fallback. */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(var(--mui-palette-primary-main), var(--mui-palette-secondary-main)) padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-width: 1px;
+  box-shadow: 0 0 8px var(--mui-palette-secondary-main);
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--mui-palette-primary-main) transparent;
+  }
 }
 
 .sr-only {
@@ -84,7 +108,7 @@ main:focus {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
+  main {
     scroll-behavior: auto;
   }
   .reveal,

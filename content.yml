@@ -124,24 +124,8 @@ experience:
     title: B.E. in Information Science and Engineering
     period: "2019"
 
-projects:
-  - name: Task Manager API
-    description: Rest API for task manager, Postman API documentation link can be found at my github repository.
-    stack: [Express, Node.js, Mongoose, Jest, Heroku]
-    github: https://github.com/samarth-sangam/task-manager-api
-  - name: Node Geocode
-    description: Geocode of address using Node.
-    stack: [Express, Node.js, hbs, Heroku]
-    github: https://github.com/samarth-sangam/node-geocode
-  - name: Chat App
-    description: Room based chat web application, filters out explicit language.
-    stack: [Express, Socket.io, Node.js]
-    github: https://github.com/samarth-sangam/chat-app
-  - name: Amazon clone
-    description: Amazon clone built using React, Context API, Firebase and Firebase authentication.
-    stack: [React, React Context, Firebase, SCSS, Express, Stripe.js]
-    github: https://github.com/samarth-sangam/amazon-clone
-    url: https://clone-95b79.web.app/
+# Projects = the repos pinned on this GitHub profile, fetched at build time (needs GITHUB_TOKEN).
+github: samarth-sangam
 
 # Latest Medium posts are fetched at build time. Remove this block to hide the section.
 blog:

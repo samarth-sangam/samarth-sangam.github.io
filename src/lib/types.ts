@@ -59,6 +59,7 @@ export interface Content {
   links?: SiteLink[];
   skills?: Skill[];
   experience?: Role[];
+  github?: string;
   projects?: Project[];
   blog?: { medium: string; limit?: number };
   contact?: { heading?: string; message?: string };

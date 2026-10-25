@@ -28,7 +28,7 @@ const Hero = ({ profile, links, site, years }: HeroProps) => {
   return (
   <Container
     maxWidth="md"
-    sx={{ minHeight: "calc(100svh - 48px)", display: "flex", alignItems: "center", py: 4 }}
+    sx={{ display: "flex", alignItems: "center", py: 4 }}
   >
     <TerminalWindow title={`${site.user}@${site.host}: ~`} sx={{ width: "100%" }}>
       <Line command="whoami">

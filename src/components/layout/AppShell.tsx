@@ -44,12 +44,13 @@ const AppShell = ({ content, buildYear, children }: Props) => {
           Skip to content
         </a>
         <Box className="grid-bg" />
-        <Header user={content.site.user} pages={pages} onOpenPalette={() => setPaletteOpen(true)} />
-        <Box component="main" id="main" tabIndex={-1} sx={{ minHeight: "100svh", pt: 6 }}>
-          {children}
+        <Box sx={{ height: "100dvh", display: "flex", flexDirection: "column" }}>
+          <Header user={content.site.user} pages={pages} onOpenPalette={() => setPaletteOpen(true)} />
+          <PageFlow key={pathname} {...adjacentPages(pages, pathname)}>
+            {children}
+          </PageFlow>
+          <Footer name={content.profile.name} year={buildYear} />
         </Box>
-        <PageFlow key={pathname} {...adjacentPages(pages, pathname)} />
-        <Footer name={content.profile.name} year={buildYear} />
         <CommandPalette
           open={paletteOpen}
           onClose={() => setPaletteOpen(false)}

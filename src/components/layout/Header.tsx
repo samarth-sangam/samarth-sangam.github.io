@@ -4,18 +4,14 @@ import { usePathname } from "next/navigation";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Fab from "@mui/material/Fab";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
-import Zoom from "@mui/material/Zoom";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
 import { useColorScheme } from "@mui/material/styles";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import MenuIcon from "@mui/icons-material/Menu";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 import { isCurrent, type NavPage } from "lib/navigation.ts";
 
@@ -24,22 +20,15 @@ type HeaderProps = { user: string; pages: NavPage[]; onOpenPalette: () => void }
 const Header = ({ user, pages, onOpenPalette }: HeaderProps) => {
   const pathname = usePathname();
   const [menuAnchor, setMenuAnchor] = useState<HTMLElement | null>(null);
-  const scrolled = useScrollTrigger({ disableHysteresis: true, threshold: 100 });
   const { mode, systemMode, setMode } = useColorScheme();
   const dark = (mode === "system" ? systemMode : mode) !== "light";
 
   return (
     <>
       <AppBar
+        position="static"
         elevation={0}
-        sx={{
-          bgcolor: (t) => (scrolled ? t.alpha((t.vars ?? t).palette.background.default, .8) : "transparent"),
-          color: "text.primary",
-          backdropFilter: scrolled ? "blur(10px)" : "none",
-          borderBottom: 1,
-          borderColor: scrolled ? "divider" : "transparent",
-          transition: "background-color .3s, border-color .3s",
-        }}
+        sx={{ flex: "none", bgcolor: "transparent", color: "text.primary", borderBottom: 1, borderColor: "divider" }}
       >
         <Toolbar variant="dense" sx={{ gap: 1 }}>
           <Button component={Link} href="/" color="primary" sx={{ textTransform: "none", fontWeight: 700, mr: "auto" }}>
@@ -114,17 +103,6 @@ const Header = ({ user, pages, onOpenPalette }: HeaderProps) => {
           </MenuItem>
         ))}
       </Menu>
-      <Zoom in={scrolled}>
-        <Fab
-          color="primary"
-          size="small"
-          href="#main"
-          aria-label="Scroll back to top"
-          sx={{ position: "fixed", bottom: 16, right: 16 }}
-        >
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </Zoom>
     </>
   );
 };
