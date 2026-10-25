@@ -36,7 +36,7 @@ jobs:
         run: "! grep -rqF \"$GITHUB_TOKEN\" out"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: out
 
